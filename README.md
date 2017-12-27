@@ -15,6 +15,21 @@ agreeing to the terms contained therein. If you have not received and read
 the license file, or do not agree with its conditions, please cease using
 this software immediately and remove any copies you may have in your
 possession.
+# Installation Debian Stretch 9.0
+
+1) sudo apt-get update && sudo apt-get upgrade
+
+2) sudo apt-get install libapache2-mod-php7.0 php7.0-soap php7.0-xml
+
+3) Download zip file from GitHub project site: https://github.com/phpvirtualbox/phpvirtualbox/archive/master.zip
+
+4) Unzip zipfile into /usr/share/phpvirtualbox
+
+5) Rename config.php-example to config.php and edit as needed.
+
+6) Move phpvirtualbox.conf into /etc/apache2/conf-available/  * NB: The default config file makes phpvirtualbox only accessible from the localhost for security reasons.
+
+7) Run `a2enconf phpvirtualbox` and `service apache2 reload`
 
 # Installation from Zip file
 
